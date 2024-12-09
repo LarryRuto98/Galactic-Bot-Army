@@ -31,14 +31,14 @@ function App() {
     // Delete the bot from the backend (no error handling)
     fetch(`http://localhost:8001/bots/${botId}`, { method: 'DELETE' })
       .then(() => {
-        // Successfully deleted from the backend, nothing more to do
+       
       })
       .catch(() => {
-        // No error handling, just don't do anything
+       
       });
   };
 
-  // Function to view the details of a selected bot
+ 
   const viewBotDetails = (botId) => {
     fetch(`http://localhost:8001/bots/${botId}`)
       .then((response) => response.json())
